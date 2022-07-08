@@ -1,0 +1,149 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/Soma/tiles.png" type="Texture" id=1]
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_texture = ExtResource( 1 )
+uv1_scale = Vector3( 1.306, 2.054, 1 )
+
+[node name="EntranceStairs" type="Spatial"]
+transform = Transform( 0.432701, 0, 0, 0, 0.439384, 0, 0, 0, 1.00005, -4.54638, 0.277182, -1.79416 )
+
+[node name="Bungalow17" type="MeshInstance" parent="."]
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow19" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0303, -0.484687, -0.060047 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow18" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.493527, -0.248678, -0.0570471 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow20" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49265, -0.841254, -0.0570471 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow21" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8712, -1.28448, -0.0570471 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow22" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.19865, -1.65592, -0.0570471 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow23" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.46982, -1.99415, -0.0570471 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow24" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.292189, 0, 0, 0, 0.107902, -0.068141, 2.44076, 0.842801 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow28" type="MeshInstance" parent="."]
+transform = Transform( 0.158259, 0, 0, 0, 0.813379, 0, 0, 0, 0.107902, -3.53433, -0.581414, 0.842801 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow29" type="MeshInstance" parent="."]
+transform = Transform( 0.158259, 0, 0, 0, 0.813379, 0, 0, 0, 0.107902, -3.53433, -0.581414, -0.957716 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow30" type="MeshInstance" parent="."]
+transform = Transform( 0.158259, 0, 0, 0, 0.813379, 0, 0, 0, 0.107902, -2.4145, 0.382701, -0.957716 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow31" type="MeshInstance" parent="."]
+transform = Transform( 0.158259, 0, 0, 0, 0.813379, 0, 0, 0, 0.107902, -2.4145, 0.382701, 0.846299 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow32" type="MeshInstance" parent="."]
+transform = Transform( 0.158259, 0, 0, 0, 0.813379, 0, 0, 0, 0.107902, -0.837288, 1.61401, 0.846299 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow33" type="MeshInstance" parent="."]
+transform = Transform( 0.158259, 0, 0, 0, 0.813379, 0, 0, 0, 0.107902, -0.837288, 1.61401, -0.876207 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow34" type="MeshInstance" parent="."]
+transform = Transform( 0.158259, 0, 0, 0, 0.813379, 0, 0, 0, 0.107902, -1.67829, 1.29974, -0.876207 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow37" type="MeshInstance" parent="."]
+transform = Transform( 0.158259, 0, 0, 0, 0.813379, 0, 0, 0, 0.107902, -1.67829, 0.994255, 0.843286 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow38" type="MeshInstance" parent="."]
+transform = Transform( 0.111906, -0.584029, 0, 0.110204, 0.575146, 0, 0, 0, 0.107902, -0.0620995, 1.73784, 0.899643 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow39" type="MeshInstance" parent="."]
+transform = Transform( 0.111906, -0.584029, 0, 0.110204, 0.575146, 0, 0, 0, 0.107902, -0.0620995, 1.73784, -0.94212 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow35" type="MeshInstance" parent="."]
+transform = Transform( 0.158259, 0, 0, 0, 0.813379, 0, 0, 0, 0.107902, -2.93688, 0.357902, -0.876207 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow36" type="MeshInstance" parent="."]
+transform = Transform( 0.158259, 0, 0, 0, 0.813379, 0, 0, 0, 0.107902, -3.0304, 0.044068, 0.795688 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow25" type="MeshInstance" parent="."]
+transform = Transform( 1.41743, -0.127797, 0, 1.11243, 0.185712, 0, 0, 0, 0.107902, -2.25457, 1.3263, 0.842801 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow26" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.292189, 0, 0, 0, 0.107902, -0.068141, 2.44076, -0.831921 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
+
+[node name="Bungalow27" type="MeshInstance" parent="."]
+transform = Transform( 1.37846, -0.124283, 0, 1.12397, 0.187639, 0, 0, 0, 0.107902, -2.39819, 1.3537, -0.960072 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )

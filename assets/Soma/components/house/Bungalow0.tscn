@@ -1,0 +1,95 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/Soma/door/Door.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Soma/components/house/HouseBlockWindow.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/Soma/components/house/Bungalow.gd" type="Script" id=3]
+[ext_resource path="res://assets/Soma/tiles.png" type="Texture" id=4]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_texture = ExtResource( 4 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.94902, 0.54902, 0.54902, 1 )
+albedo_texture = ExtResource( 4 )
+uv1_scale = Vector3( 1.306, 2.054, 1 )
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_texture = ExtResource( 4 )
+uv1_scale = Vector3( 1.306, 2.054, 1 )
+
+[node name="Bungalow" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="Door" parent="." instance=ExtResource( 1 )]
+transform = Transform( -6.37561e-09, 0, 0.543974, 0, 0.241078, 0, -0.268132, 0, -4.37114e-08, -3.87469, 0.78843, -1.45875 )
+
+[node name="Door2" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.00212456, 0, -0.543957, 0, 0.241078, 0, 0.268124, 0, -0.00431019, 1.72884, 0.78843, 0.455087 )
+
+[node name="HouseBlockWindow" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.74647, 0, 0, 0, 0.895113, 0, 0, 0, 5.78663, -2.00933, 1.61903, -4.067 )
+
+[node name="HouseBlockWindow7" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.74647, 0, -5.05883e-07, 0, 0.895113, 0, 6.52585e-08, 0, -5.78663, 0.0956559, 1.61903, -3.39495 )
+
+[node name="HouseBlockWindow8" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.74647, 0, -5.05883e-07, 0, 0.895113, 0, 6.52585e-08, 0, -5.78663, 0.00792336, 1.61903, -0.711721 )
+
+[node name="HouseBlockWindow3" parent="." instance=ExtResource( 2 )]
+transform = Transform( -3.26292e-08, 0, -5.78663, 0, 0.895113, 0, 0.74647, 0, -2.52942e-07, -1.83422, 1.57808, -3.5576 )
+
+[node name="HouseBlockWindow6" parent="." instance=ExtResource( 2 )]
+transform = Transform( -3.26292e-08, 0, -5.78663, 0, 0.895113, 0, 0.74647, 0, -2.52942e-07, 0.670773, 1.57808, -3.5576 )
+
+[node name="HouseBlockWindow4" parent="." instance=ExtResource( 2 )]
+transform = Transform( -3.26292e-08, 0, -5.78663, 0, 0.895113, 0, 0.74647, 0, -2.52942e-07, -1.96126, 1.57808, 3.2892 )
+
+[node name="HouseBlockWindow5" parent="." instance=ExtResource( 2 )]
+transform = Transform( -3.26292e-08, 0, -5.78663, 0, 0.895113, 0, 0.74647, 0, -2.52942e-07, 0.583563, 1.57808, 3.2892 )
+
+[node name="HouseBlockWindow2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.74647, 0, 0, 0, 0.895113, 0, 0, 0, 5.78663, -2.14379, 1.61903, -0.329796 )
+
+[node name="Bungalow11" type="MeshInstance" parent="."]
+transform = Transform( 3.06739, 0, 0, 0, 0.322688, 0, 0, 0, 3.69956, -0.993456, 0.493226, -1.76839 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 5 )
+
+[node name="Bungalow12" type="MeshInstance" parent="."]
+transform = Transform( 3.06739, 0, 0, 0, 0.135754, -1.55428, 0, 0.132239, 1.51816, -0.993456, 4.92783, 0.325672 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="Bungalow13" type="MeshInstance" parent="."]
+transform = Transform( 3.06739, 0, 0, 0, 0.164737, 1.80575, 0, -0.143931, 1.72593, -1.07792, 4.9705, -3.87747 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="Bungalow15" type="MeshInstance" parent="."]
+transform = Transform( 0.996743, -0.228117, 0.0587107, 0.996743, 0.228117, -0.0587107, 0, 0.00265925, 1.35811, -4.13361, 4.31762, -1.65496 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="Bungalow16" type="MeshInstance" parent="."]
+transform = Transform( -0.996743, 0.228117, -0.0587108, 0.996743, 0.228117, -0.0587107, 8.7138e-08, -0.00265927, -1.35811, 2.10269, 4.31762, -1.65496 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="Bungalow14" type="MeshInstance" parent="."]
+transform = Transform( 3.06739, 0, 0, 0, 0.322688, 0, 0, 0, 3.69956, -0.993456, 3.14283, -1.76839 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="Bungalow17" type="MeshInstance" parent="."]
+transform = Transform( 0.432701, 0, 0, 0, 0.439384, 0, 0, 0, 1.00005, -4.44903, 0.277182, -2.00998 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="Bungalow18" type="MeshInstance" parent="."]
+transform = Transform( 0.432701, 0, 0, 0, 0.439384, 0, 0, 0, 1.00005, -4.96515, 0.0408726, -2.00998 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )

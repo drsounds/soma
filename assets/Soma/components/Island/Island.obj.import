@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Island.obj-513e39b0b8723827e2c1521cb92f0b2b.mesh"
+
+[deps]
+
+files=[ "res://.import/Island.obj-513e39b0b8723827e2c1521cb92f0b2b.mesh" ]
+
+source_file="res://assets/Soma/components/Island/Island.obj"
+dest_files=[ "res://.import/Island.obj-513e39b0b8723827e2c1521cb92f0b2b.mesh", "res://.import/Island.obj-513e39b0b8723827e2c1521cb92f0b2b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

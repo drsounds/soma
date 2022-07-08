@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/Soma/scenes/Sky/Sky.gd" type="Script" id=1]
+[ext_resource path="res://assets/Soma/components/Cloud/cloud.tscn" type="PackedScene" id=2]
+
+[node name="Sky" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Spawn_Start" type="Spatial" parent="."]
+
+[node name="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0533924, -1.73549, -0.328221 )
+
+[node name="Spatial2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 3.83142, 0, 0, 0, 4.16088, 0, 0, 0, 3.64619, 13.152, -2.72895, 0.381469 )

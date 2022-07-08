@@ -1,0 +1,201 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://assets/Soma/door/door.png" type="Texture" id=3]
+[ext_resource path="res://assets/Soma/door/Door.gd" type="Script" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "CloseFull"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("DoorPlan:rotation_degrees:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("DoorPlan:rotation_degrees:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 170, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("DoorPlan:rotation_degrees:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "DoorClose"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("DoorPlan:rotation_degrees:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("DoorPlan:rotation_degrees:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 90, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("DoorPlan:rotation_degrees:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "DoorOpen"
+tracks/0/type = "transform"
+tracks/0/path = NodePath("DoorPlan")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray(  )
+tracks/1/type = "value"
+tracks/1/path = NodePath("DoorPlan:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 90, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "OpenFull"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("DoorPlan:rotation_degrees:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("DoorPlan:rotation_degrees:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 170, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("DoorPlan:rotation_degrees:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+
+[sub_resource type="CubeMesh" id=5]
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="CylinderMesh" id=10]
+
+[sub_resource type="SpatialMaterial" id=11]
+albedo_texture = ExtResource( 3 )
+
+[node name="Door" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.56071, 0, 0 )
+script = ExtResource( 4 )
+is_open = true
+
+[node name="DoorAnimation" type="AnimationPlayer" parent="."]
+anims/CloseFull = SubResource( 1 )
+anims/DoorClose = SubResource( 2 )
+anims/DoorOpen = SubResource( 3 )
+anims/OpenFull = SubResource( 4 )
+
+[node name="DoorHole" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.80919, 0, 0, 0 )
+
+[node name="Hinge" type="MeshInstance" parent="DoorHole"]
+transform = Transform( 0.239377, 0, 0.00065643, 0, 3.14325, 0, 0.0107521, 0, 0.1379, 3.37652, 3.0101, -0.13338 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 6 )
+
+[node name="Hinge2" type="MeshInstance" parent="DoorHole"]
+transform = Transform( 0.239377, 0, 0.00065643, 0, 3.14325, 0, 0.0107521, 0, 0.1379, -0.326861, 3.0101, -0.13338 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 7 )
+
+[node name="Hinge3" type="MeshInstance" parent="DoorHole"]
+transform = Transform( 2.11721, 0, 0.00580588, 0, 0.216062, 0, 0.0107521, 0, 0.1379, 1.50359, 6.35863, -0.13338 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 8 )
+
+[node name="DoorPlan" type="Spatial" parent="."]
+transform = Transform( -0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, -0.984808, -0.182943, 4.76837e-07, -0.485002 )
+
+[node name="DoorPlate" type="MeshInstance" parent="DoorPlan"]
+transform = Transform( 1.57985, 0, 0.00433235, 0, 3.04705, 0, 0.0102915, 0, 0.131992, 1.69085, 3.11964, 0.183592 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 9 )
+
+[node name="Hinge1" type="MeshInstance" parent="DoorPlan"]
+transform = Transform( 0.141433, 0, 0.000387844, 0, 0.231597, 0, 0.0102915, 0, 0.131992, 0.181436, 5.466, -0.0213493 )
+mesh = SubResource( 10 )
+material/0 = SubResource( 11 )
+
+[node name="Hinge2" type="MeshInstance" parent="DoorPlan"]
+transform = Transform( 0.141433, 0, 0.000387844, 0, 0.231597, 0, 0.0102915, 0, 0.131992, 0.181436, 1.29167, -0.0213493 )
+mesh = SubResource( 10 )
+material/0 = SubResource( 11 )
+
+[node name="Hinge3" type="MeshInstance" parent="DoorPlan"]
+transform = Transform( 0.113011, 0, -0.071563, 0, 0.231597, 0, 0.0856612, 0, 0.110909, 0.165377, 4.98096, -0.0147927 )
+mesh = SubResource( 10 )
+material/0 = SubResource( 11 )
+
+[node name="Hinge4" type="MeshInstance" parent="DoorPlan"]
+transform = Transform( 0.113011, 0, -0.071563, 0, 0.231597, 0, 0.0856612, 0, 0.110909, 0.167878, 0.806626, -0.0458046 )
+mesh = SubResource( 10 )
+material/0 = SubResource( 11 )
