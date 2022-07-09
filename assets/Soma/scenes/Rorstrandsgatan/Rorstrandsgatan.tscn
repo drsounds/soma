@@ -10,15 +10,18 @@ script = ExtResource( 3 )
 
 [node name="Door" parent="." instance=ExtResource( 1 )]
 transform = Transform( 0.375137, 0, 0, 0, 0.364212, 0, 0, 0, 0.2, 15.4818, 0.0676597, 12.0701 )
+can_open = true
 
 [node name="Door2" parent="." instance=ExtResource( 1 )]
 transform = Transform( -1.62818e-08, 0, -0.198585, 0, 0.364212, 0, 0.328605, 0, -7.65789e-09, 20.1652, 0.0676597, 13.5984 )
+can_open = true
 
 [node name="Door3" parent="." instance=ExtResource( 1 )]
 transform = Transform( -1.62818e-08, 0, -0.198585, 0, 0.364212, 0, 0.328605, 0, -7.65789e-09, 20.1652, 0.0676597, 9.02488 )
 
 [node name="Door4" parent="." instance=ExtResource( 1 )]
 transform = Transform( 0.328605, 0, 1.02254e-09, 0, 0.364212, 0, 1.91796e-09, 0, 0.198585, 24.5594, 0.0676597, 15.8546 )
+can_open = true
 
 [node name="Apartment" type="MeshInstance" parent="."]
 transform = Transform( 0.012, 0, 0, 0, 0.012, 0, 0, 0, 0.012, 0, 0, 0 )
