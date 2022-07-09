@@ -1,4 +1,4 @@
-extends ViewportContainer
+extends MeshInstance
 
 
 # Declare member variables here. Examples:
@@ -8,10 +8,10 @@ extends ViewportContainer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Viewport/SceneManager.go_to_scene("Rorstrandsgatan", "Start")
-
-func go_to_scene(scene_id, spawn_id):
-	$Viewport/SceneManager.go_to_scene(scene_id, spawn_id)
+	self.create_trimesh_collision()
+	for child in get_children():
+		if child is MeshInstance:
+			child.create_trimesh_collision()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
