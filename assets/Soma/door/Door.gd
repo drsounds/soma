@@ -51,6 +51,7 @@ func set_is_open(value):
 	else:
 		get_node("DoorAnimation").play('DoorClose')
 	is_full_open = value
+	is_open = value
 
 func get_is_full_open():
 	return is_full_open
@@ -72,11 +73,15 @@ func unlock():
 	self.is_open = true
 
 func toggle_open():
-	 self.is_open = !self.is_open
+	if self.is_open:
+		self.is_open = false
+	else:
+		self.is_open = true
 
 func use(target):
 	if not is_locked:
 		toggle_open()
+		return
 	if code != null:
 		if target.door_keys.has(code):
 			self.unlock()

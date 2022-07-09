@@ -21,6 +21,42 @@
 			"z_index": 0
 		},
 		{
+			"character": "character-1657375514.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The communist regime in Romania is now falling apart after a set of violent demonstration in major cities over food shortages"
+		},
+		{
+			"character": "character-1657301998.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "So what is happening?"
+		},
+		{
+			"character": "character-1657375514.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The military just had an amazing public hanging in Bukarest today! Everybody was there to see when the dictator gets the wage he deserves for his treatment of his kids"
+		},
+		{
+			"character": "character-1657301998.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Did you go there?"
+		},
+		{
+			"character": "character-1657375514.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No, it's too scary for me. But a friend of me was there and there was a big cheer when the gallow opened and the leader struggled to his death \n"
+		},
+		{
+			"character": "character-1657375514.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I see. We have not eaten for two weeks.... Shortages everywhere of course. "
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -31,6 +67,18 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "We've just confirmed these pictures are real and the pictures we seen are upsetting, showing babies covered in their own faeces"
+		},
+		{
+			"character": "character-1657301998.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "At least, we hoped to get a new Romania after this..."
+		},
+		{
+			"character": "character-1657375514.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh yeah...."
 		}
 	],
 	"metadata": {

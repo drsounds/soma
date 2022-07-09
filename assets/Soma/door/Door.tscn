@@ -146,7 +146,6 @@ albedo_texture = ExtResource( 3 )
 [node name="Door" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.56071, 0, 0 )
 script = ExtResource( 4 )
-is_open = true
 
 [node name="DoorAnimation" type="AnimationPlayer" parent="."]
 anims/CloseFull = SubResource( 1 )
@@ -178,6 +177,30 @@ transform = Transform( -0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, -0.984808,
 [node name="DoorPlate" type="MeshInstance" parent="DoorPlan"]
 transform = Transform( 1.57985, 0, 0.00433235, 0, 3.04705, 0, 0.0102915, 0, 0.131992, 1.69085, 3.11964, 0.183592 )
 mesh = SubResource( 5 )
+material/0 = SubResource( 9 )
+
+[node name="DoorMirror" type="MeshInstance" parent="DoorPlan/DoorPlate"]
+transform = Transform( 0.481948, 0, 0.0237378, 0, 0.30503, 0, -0.0639549, 0, 0.939438, 0.120251, -0.493321, -1.17853 )
+mesh = SubResource( 5 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 9 )
+
+[node name="DoorMirror2" type="MeshInstance" parent="DoorPlan/DoorPlate"]
+transform = Transform( 0.481948, 0, 0.0237378, 0, 0.30503, 0, -0.0639549, 0, 0.939438, 0.12025, 0.489987, -1.17853 )
+mesh = SubResource( 5 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 9 )
+
+[node name="DoorMirror3" type="MeshInstance" parent="DoorPlan/DoorPlate"]
+transform = Transform( 0.481948, 0, 0.0237378, 0, 0.30503, 0, -0.0639549, 0, 0.939438, 0.146484, 0.489987, 1.00701 )
+mesh = SubResource( 5 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 9 )
+
+[node name="DoorMirror4" type="MeshInstance" parent="DoorPlan/DoorPlate"]
+transform = Transform( 0.481948, 0, 0.0237378, 0, 0.30503, 0, -0.0639549, 0, 0.939438, 0.138411, -0.525789, 0.334463 )
+mesh = SubResource( 5 )
+skeleton = NodePath("../..")
 material/0 = SubResource( 9 )
 
 [node name="Hinge1" type="MeshInstance" parent="DoorPlan"]

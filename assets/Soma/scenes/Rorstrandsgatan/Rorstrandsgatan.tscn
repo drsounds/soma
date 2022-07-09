@@ -1,26 +1,95 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/Soma/door/Door.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Soma/scenes/Rorstrandsgatan/Rorstrandsgatan.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://assets/Soma/scenes/Rorstrandsgatan/Rorstrandsgatan.gd" type="Script" id=3]
 [ext_resource path="res://assets/Soma/scenes/Rorstrandsgatan/Apartment.gd" type="Script" id=4]
+[ext_resource path="res://assets/Soma/scenes/FuturisticCity.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/DrSounds/Music/Midnight Sun.ogg" type="AudioStream" id=6]
+[ext_resource path="res://assets/Soma/components/Television/Television.tscn" type="PackedScene" id=7]
 
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 3 )
 
+[node name="Television2" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0, 0, -0.521718, 0, 0.512572, 0, 0.564443, 0, 0, 19.4957, 0.394264, 18.2959 )
+
+[node name="FuturisticCity" parent="." instance=ExtResource( 5 )]
+
+[node name="FuturisticCity2" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -329.827 )
+
+[node name="FuturisticCity3" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -476.741, 0, -329.827 )
+
+[node name="FuturisticCity4" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -426.64, 0, -329.827 )
+
+[node name="OmniLight2" type="OmniLight" parent="."]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15.0232, -63.2212, 200.704 )
+light_energy = 2.73
+omni_range = 37.814
+
+[node name="OmniLight7" type="OmniLight" parent="."]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 284.8, -63.2212, 118.616 )
+light_energy = 2.73
+omni_range = 37.814
+
+[node name="OmniLight8" type="OmniLight" parent="."]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 101.445, -63.2212, 60.0633 )
+light_energy = 2.73
+omni_range = 37.814
+
+[node name="OmniLight9" type="OmniLight" parent="."]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 101.445, -290.679, -28.8231 )
+light_energy = 2.73
+omni_range = 24.0199
+
+[node name="OmniLight3" type="OmniLight" parent="."]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.0738, 2.50351, 9.83424 )
+light_energy = 5.324
+light_indirect_energy = 0.0
+light_specular = 0.932
+
+[node name="OmniLight4" type="OmniLight" parent="."]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.7792, 2.50351, 3.5584 )
+light_energy = 5.324
+light_indirect_energy = 0.0
+light_specular = 0.932
+
+[node name="OmniLight5" type="OmniLight" parent="."]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.7623, 2.50351, 2.54883 )
+light_energy = 5.331
+light_specular = 0.932
+omni_range = 5.021
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 24.6659, 2.50351, 11.9967 )
+light_indirect_energy = 0.0
+light_specular = 0.932
+
+[node name="OmniLight6" type="OmniLight" parent="."]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 24.6654, 2.58274, 19.0259 )
+light_energy = 2.297
+omni_range = 59.281
+
 [node name="Door" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.375137, 0, 0, 0, 0.364212, 0, 0, 0, 0.2, 15.4818, 0.0676597, 12.0701 )
+transform = Transform( 0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 15.4544, 0.127426, 12.2515 )
 can_open = true
 
 [node name="Door2" parent="." instance=ExtResource( 1 )]
-transform = Transform( -1.62818e-08, 0, -0.198585, 0, 0.364212, 0, 0.328605, 0, -7.65789e-09, 20.1652, 0.0676597, 13.5984 )
+transform = Transform( -1.66103e-08, 0, -0.38, 0, 0.38, 0, 0.38, 0, -1.66103e-08, 20.09, 0.0234493, 13.502 )
 can_open = true
 
 [node name="Door3" parent="." instance=ExtResource( 1 )]
-transform = Transform( -1.62818e-08, 0, -0.198585, 0, 0.364212, 0, 0.328605, 0, -7.65789e-09, 20.1652, 0.0676597, 9.02488 )
+transform = Transform( -1.5299e-08, 0, -0.35, 0, 0.35, 0, 0.35, 0, -1.5299e-08, 20.1652, 0.157469, 8.9059 )
 
 [node name="Door4" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.328605, 0, 1.02254e-09, 0, 0.364212, 0, 1.91796e-09, 0, 0.198585, 24.5594, 0.0676597, 15.8546 )
+transform = Transform( 0.38, 0, -2.21793e-09, 0, 0.38, 0, 2.21793e-09, 0, 0.38, 24.4096, -0.0833404, 16.063 )
+can_open = true
+
+[node name="Door5" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.43924e-08, 0, 0.38, 0, 0.38, 0, -0.38, 0, -1.43924e-08, 20.2656, 0.0125291, 20.8025 )
 can_open = true
 
 [node name="Apartment" type="MeshInstance" parent="."]
@@ -274,7 +343,54 @@ material/244 = null
 material/245 = null
 material/246 = null
 material/247 = null
+material/248 = null
+material/249 = null
+material/250 = null
+material/251 = null
+material/252 = null
+material/253 = null
+material/254 = null
+material/255 = null
+material/256 = null
+material/257 = null
+material/258 = null
+material/259 = null
+material/260 = null
+material/261 = null
+material/262 = null
+material/263 = null
+material/264 = null
+material/265 = null
+material/266 = null
+material/267 = null
+material/268 = null
+material/269 = null
+material/270 = null
+material/271 = null
+material/272 = null
+material/273 = null
+material/274 = null
+material/275 = null
+material/276 = null
+material/277 = null
+material/278 = null
+material/279 = null
+material/280 = null
+material/281 = null
+material/282 = null
+material/283 = null
+material/284 = null
+material/285 = null
+material/286 = null
+material/287 = null
 script = ExtResource( 4 )
 
 [node name="Spawn_Start" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6497, 1.31262, 14.0453 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6497, 0.420435, 17.9807 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
+
+[node name="Television" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 56.5716, -16.6598, 39.6286 )

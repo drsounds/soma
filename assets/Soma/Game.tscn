@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/Soma/SceneManager.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/MobileControls/MobileControls.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Soma/Game.gd" type="Script" id=3]
 [ext_resource path="res://assets/Soma/TelevisionOverlay.tscn" type="PackedScene" id=4]
+[ext_resource path="res://addons/dialogic/Dialog.tscn" type="PackedScene" id=5]
 
 [node name="ViewportContainer" type="ViewportContainer"]
 margin_left = -15.0
@@ -23,3 +24,6 @@ position = Vector2( 11, 2 )
 [node name="MobileControls" parent="Viewport" instance=ExtResource( 2 )]
 
 [node name="TelevisionOverlay" parent="Viewport" instance=ExtResource( 4 )]
+
+[node name="Dialog" parent="Viewport" instance=ExtResource( 5 )]
+timeline = "timeline-1657302017.json"

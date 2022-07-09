@@ -198,7 +198,7 @@ func _process_event(event):
 				print(node)
 				if node is Spatial:
 					var distance = self.get_global_transform().origin.distance_to(node.get_global_transform().origin)
-					if distance < 5:
+					if distance < 1:
 						if node.has_method('use'):
 							node.use(self)
 
