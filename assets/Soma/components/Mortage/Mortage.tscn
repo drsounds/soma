@@ -16,31 +16,37 @@ material = SubResource( 1 )
 script = ExtResource( 2 )
 
 [node name="Fence" type="MeshInstance" parent="."]
-transform = Transform( 11.5006, 0, 0, 0, 0.595747, 0, 0, 0, 0.112455, -0.772654, 0.838686, -12.6636 )
+transform = Transform( 28.285, 0, 0, 0, 0.595747, 0, 0, 0, 0.047936, -4.21888, 0.838686, -25.6245 )
 mesh = SubResource( 2 )
 skeleton = NodePath("../..")
 material/0 = null
 
 [node name="Fence3" type="MeshInstance" parent="."]
-transform = Transform( -2.61106e-07, 0, -0.112455, 0, 0.595747, 0, 10.6657, 0, -8.77688e-09, 10.8351, 0.838684, -2.59141 )
+transform = Transform( -5.26129e-07, 0, -0.226597, 0, 0.595747, 0, 23.1981, 0, -1.90899e-08, 25.2202, 0.838684, -1.80736 )
 mesh = SubResource( 2 )
 skeleton = NodePath("../..")
 material/0 = null
 
 [node name="Fence4" type="MeshInstance" parent="."]
-transform = Transform( -2.61106e-07, 0, -0.112455, 0, 0.595747, 0, 2.57486, 0, -2.11888e-09, -12.0128, 0.69834, 5.51508 )
+transform = Transform( -5.26129e-07, 0, -0.226597, 0, 0.595747, 0, 2.57486, 0, -2.11888e-09, -21.18, 0.69834, 5.51508 )
 mesh = SubResource( 2 )
 skeleton = NodePath("../..")
 material/0 = null
 
 [node name="Fence5" type="MeshInstance" parent="."]
-transform = Transform( -2.61106e-07, 0, -0.112455, 0, 0.595747, 0, 2.30278, 0, -1.89498e-09, -11.9331, 0.838686, -10.3466 )
+transform = Transform( -5.26129e-07, 0, -0.226597, 0, 0.595747, 0, 9.93131, 0, -8.17258e-09, -31.8951, 0.838686, 11.7255 )
+mesh = SubResource( 2 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="Fence6" type="MeshInstance" parent="."]
+transform = Transform( -5.26129e-07, 0, -0.226597, 0, 0.595747, 0, 10.2985, 0, -8.47474e-09, -31.8951, 0.838686, -15.4022 )
 mesh = SubResource( 2 )
 skeleton = NodePath("../..")
 material/0 = null
 
 [node name="Fence2" type="MeshInstance" parent="."]
-transform = Transform( 11.4088, 0, 0, 0, 0.595747, 0, 0, 0, 0.112455, -0.681473, 0.718333, 7.98991 )
+transform = Transform( 29.135, 0, 0, 0, 0.595747, 0, 0, 0, 0.112455, -2.99424, 0.718333, 22.3299 )
 mesh = SubResource( 2 )
 skeleton = NodePath("../..")
 material/0 = null

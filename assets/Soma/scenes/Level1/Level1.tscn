@@ -1,15 +1,21 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/Soma/components/Mortage/Mortage.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Soma/components/Key/Key.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Soma/scenes/Level1/Level1.gd" type="Script" id=3]
 [ext_resource path="res://assets/Soma/components/Island/Island.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/Soma/tiles.png" type="Texture" id=5]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_texture = ExtResource( 5 )
 
 [node name="Scene" type="Spatial"]
 script = ExtResource( 3 )
 
 [node name="Spatial" parent="." instance=ExtResource( 4 )]
-transform = Transform( 3.42106, 0, 0, 0, 2, 0, 0, 0, 3.04584, -16.7532, -30.7381, -35.4501 )
+transform = Transform( 14.044, 0, 0, 0, 2, 0, 0, 0, 10.2055, -35.3117, -30.7381, -106.741 )
 
 [node name="Key" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1824, 0.372729, 1.35603 )
@@ -21,3 +27,8 @@ is_entrance_locked = true
 
 [node name="Spawn_Start" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.9797, 0, -3.10235 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 3.65811, 0, 0, 0, 1.0017, 0, 0, 0, 1.66344, -15.4216, -0.777059, -2.4398 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
