@@ -159,7 +159,7 @@ godot_remote/general/auto_connection_port=52617
 
 [display]
 
-window/size/width=2340
+window/size/width=1920
 window/size/height=1080
 window/size/fullscreen=true
 window/dpi/allow_hidpi=true

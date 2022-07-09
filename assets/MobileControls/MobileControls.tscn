@@ -30,7 +30,7 @@ action_up = "forward"
 action_down = "backward"
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
-position = Vector2( 2057, 622 )
+position = Vector2( 1598, 631.628 )
 rotation = -0.0145243
 scale = Vector2( 0.180966, 0.183076 )
 normal = ExtResource( 1 )
@@ -47,7 +47,7 @@ theme = SubResource( 3 )
 text = "Use"
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
-position = Vector2( 1886.5, 795.425 )
+position = Vector2( 1427.5, 805.053 )
 rotation = -0.00726217
 scale = Vector2( 0.169943, 0.179208 )
 normal = ExtResource( 1 )
@@ -64,7 +64,7 @@ theme = SubResource( 3 )
 text = "Jump"
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="."]
-position = Vector2( 1665, 629.142 )
+position = Vector2( 1206, 638.77 )
 rotation = -0.00726217
 scale = Vector2( 0.180086, 0.169211 )
 normal = ExtResource( 1 )
