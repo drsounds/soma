@@ -23,6 +23,7 @@ margin_top = 627.0
 margin_right = 490.0
 margin_bottom = 943.0
 rect_pivot_offset = Vector2( 178, 86 )
+visibility_mode = 1
 action_left = "left"
 action_right = "right"
 action_up = "forward"
@@ -35,6 +36,7 @@ scale = Vector2( 0.180966, 0.183076 )
 normal = ExtResource( 1 )
 shape_centered = false
 action = "use"
+visibility_mode = 1
 
 [node name="Label" type="Label" parent="TouchScreenButton2"]
 margin_left = 267.206
@@ -51,6 +53,7 @@ scale = Vector2( 0.169943, 0.179208 )
 normal = ExtResource( 1 )
 shape_centered = false
 action = "jump"
+visibility_mode = 1
 
 [node name="Label" type="Label" parent="TouchScreenButton"]
 margin_left = 148.0
@@ -67,6 +70,7 @@ scale = Vector2( 0.180086, 0.169211 )
 normal = ExtResource( 1 )
 shape_centered = false
 action = "jump"
+visibility_mode = 1
 
 [node name="Label" type="Label" parent="TouchScreenButton3"]
 margin_left = 168.863

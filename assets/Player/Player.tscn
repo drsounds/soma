@@ -649,7 +649,7 @@ shape = SubResource( 1 )
 [node name="Godot_Chan_Stealth_Shooter" parent="Mesh" instance=ExtResource( 1 )]
 
 [node name="gun_attachment" type="BoneAttachment" parent="Mesh/Godot_Chan_Stealth_Shooter/Godot_Chan_Stealth/Skeleton" index="8"]
-transform = Transform( -0.0671774, 0.925462, 0.372838, 0.481312, -0.297268, 0.824604, 0.873971, 0.234846, -0.425466, -0.147884, 1.05068, 0.10058 )
+transform = Transform( -0.0671775, 0.925461, 0.372837, 0.480265, -0.297548, 0.825113, 0.874547, 0.234489, -0.424478, -0.147884, 1.05104, 0.100624 )
 bone_name = "hand_r"
 
 [node name="Rifle" type="Spatial" parent="Mesh/Godot_Chan_Stealth_Shooter/Godot_Chan_Stealth/Skeleton/gun_attachment"]
@@ -670,7 +670,7 @@ tip_bone = "spine_3"
 target_node = NodePath("../../../../../Camroot/h/v/pivot/spine_ik_target")
 
 [node name="neck_attachment" type="BoneAttachment" parent="Mesh/Godot_Chan_Stealth_Shooter/Godot_Chan_Stealth/Skeleton" index="10"]
-transform = Transform( 0.999954, -0.00876045, 0.00380497, 0.00955095, 0.919095, -0.393919, -4.61447e-05, 0.393937, 0.919137, 0.00330931, 1.25768, -0.0502046 )
+transform = Transform( 0.999954, -0.00876046, 0.00380497, 0.00955102, 0.918656, -0.394944, -3.54951e-05, 0.394962, 0.918697, 0.00330931, 1.25761, -0.0521537 )
 bone_name = "neck_1"
 
 [node name="OmniLight" type="OmniLight" parent="Mesh/Godot_Chan_Stealth_Shooter/Godot_Chan_Stealth/Skeleton/neck_attachment"]
