@@ -5,13 +5,13 @@
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
-			"character": "",
+			"character": "character-1657375514.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
-			"portrait": "",
+			"portrait": "Default",
 			"portrait_definition": "",
 			"position": {
-				"0": false,
+				"0": true,
 				"1": false,
 				"2": false,
 				"3": false,
@@ -21,15 +21,21 @@
 			"z_index": 0
 		},
 		{
-			"character": "character-1657301998.json",
+			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Test"
+			"text": "Good Evening January 1st, 1990! We've just got terrific reports the just collapsed regime  has left thousands of children in hundreds of shoddy orphanages across Romania who are living under extreme harsh conditions"
+		},
+		{
+			"character": "character-1657375514.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "We've just confirmed these pictures are real and the pictures we seen are upsetting, showing babies covered in their own faeces"
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.3",
 		"file": "timeline-1657302017.json",
-		"name": "timeline-1657302017"
+		"name": "Intro"
 	}
 }

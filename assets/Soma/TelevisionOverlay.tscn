@@ -20,4 +20,5 @@ position = Vector2( -62, 103 )
 texture = ExtResource( 2 )
 
 [node name="TelevisionNewsOverlay" parent="." instance=ExtResource( 3 )]
+visible = false
 position = Vector2( -1917, -6 )

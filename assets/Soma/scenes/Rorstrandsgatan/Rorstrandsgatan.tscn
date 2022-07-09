@@ -9,7 +9,16 @@
 script = ExtResource( 3 )
 
 [node name="Door" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -50.6993, 13.92, 49.7483 )
+transform = Transform( 0.375137, 0, 0, 0, 0.364212, 0, 0, 0, 0.2, 15.4818, 0.0676597, 12.0701 )
+
+[node name="Door2" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.62818e-08, 0, -0.198585, 0, 0.364212, 0, 0.328605, 0, -7.65789e-09, 20.1652, 0.0676597, 13.5984 )
+
+[node name="Door3" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.62818e-08, 0, -0.198585, 0, 0.364212, 0, 0.328605, 0, -7.65789e-09, 20.1652, 0.0676597, 9.02488 )
+
+[node name="Door4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.328605, 0, 1.02254e-09, 0, 0.364212, 0, 1.91796e-09, 0, 0.198585, 24.5594, 0.0676597, 15.8546 )
 
 [node name="Apartment" type="MeshInstance" parent="."]
 transform = Transform( 0.012, 0, 0, 0, 0.012, 0, 0, 0, 0.012, 0, 0, 0 )
@@ -261,7 +270,8 @@ material/243 = null
 material/244 = null
 material/245 = null
 material/246 = null
+material/247 = null
 script = ExtResource( 4 )
 
 [node name="Spawn_Start" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0114, 3.92558, 13.145 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6497, 1.31262, 14.0453 )
