@@ -35,8 +35,10 @@ func _input(event):
 		camrot_v += event.relative.y * (v_sensitivity * aim_transition + v_sensitivity_aim * (1-aim_transition))
 	if event is InputEventJoypadMotion:		
 		var aim_transition = get_node("../AnimationTree").get("parameters/aim_transition/current")
-		camrot_h += -event.relative.x * (h_sensitivity * aim_transition + h_sensitivity_aim * (1-aim_transition))
-		camrot_v += event.relative.y * (v_sensitivity * aim_transition + v_sensitivity_aim * (1-aim_transition))
+		if event.axis == 2:
+			camrot_h += -event.axis_value * 100 * (h_sensitivity * aim_transition + h_sensitivity_aim * (1-aim_transition))
+		elif event.axis == 3:
+			camrot_v += event.axis_value * 100 * (v_sensitivity * aim_transition + v_sensitivity_aim * (1-aim_transition))
 
 func _physics_process(delta):
 	
