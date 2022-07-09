@@ -55,11 +55,11 @@ func load_scene(scene_id, spawn_id):
 		player.global_transform.origin.y = spawn.global_transform.origin.y
 		player.global_transform.origin.z = spawn.global_transform.origin.z
 	
-	var mobile_controls = self.get_parent().get_node("MobileControls")
+	var mobile_controls = self.get_parent().find_node("MobileControls*")
 	if mobile_controls:
 		mobile_controls.set_player(player)
-		var medium = scene.medium
-		player.set_medium(medium)
+	var medium = scene.medium
+	player.set_medium(medium)
 		
 	#self.fade_in()
 

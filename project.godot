@@ -141,8 +141,9 @@ _global_script_class_icons={
 [application]
 
 config/name="Soma"
-run/main_scene="res://assets/Soma/Game.tscn"
+run/main_scene="res://assets/Soma/GameScreen.tscn"
 run/low_processor_mode=true
+run/delta_smoothing=false
 config/icon="res://icon.png"
 
 [autoload]
@@ -159,11 +160,11 @@ godot_remote/general/auto_connection_port=52617
 
 [display]
 
-window/size/width=1920
+window/size/width=2340
 window/size/height=1080
 window/size/fullscreen=true
 window/dpi/allow_hidpi=true
-window/stretch/mode="viewport"
+window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
 [editor_plugins]

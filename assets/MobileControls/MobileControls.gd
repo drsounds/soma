@@ -5,18 +5,21 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
+func _is_mobile():
+	return OS.has_feature("mobile")
+
 func set_player(player):
 	$VirtualJoystick2.player = player
 
 func _on_joy_connection_changed(device_id, connected):
-	if connected and OS.has_feature("mobile"):
+	if connected and _is_mobile():
 		self.visible = false
 	else:
 		self.visible = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.visible = false
-	if OS.has_feature("mobile"):
+	if _is_mobile():
 		self.visible = true
 		
 		

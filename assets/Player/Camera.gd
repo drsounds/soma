@@ -12,7 +12,7 @@ var h_acceleration = 10
 var v_acceleration = 10
 
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	$h/v/pivot/Camera.add_exception(get_parent())
 	Input.connect("joy_connection_changed",self,"joy_con_changed")
 	print("Connected joypads: " + str(Input.get_connected_joypads()))
