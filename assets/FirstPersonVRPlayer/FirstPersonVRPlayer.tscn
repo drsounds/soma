@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/FirstPersonVRPlayer/FirstPersonVRPlayer.gd" type="Script" id=1]
 [ext_resource path="res://assets/Romanium/entities/Hood/Hood.obj" type="ArrayMesh" id=2]
@@ -6,6 +6,8 @@
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.6
 height = 1.5
+
+[sub_resource type="CubeMesh" id=2]
 
 [node name="FirstPersonVRPlayer" type="KinematicBody"]
 input_capture_on_drag = true
@@ -15,6 +17,7 @@ flying = true
 [node name="Collision" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
 shape = SubResource( 1 )
+disabled = true
 
 [node name="Head" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
@@ -32,3 +35,8 @@ mesh = ExtResource( 2 )
 skeleton = NodePath("")
 material/0 = null
 material/1 = null
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.88843 )
+mesh = SubResource( 2 )
+material/0 = null
