@@ -67,7 +67,7 @@ func _physics_process(delta) -> void:
 		)
 
 		strafe_dir = direction	
-		var v = move_and_slide(direction * 1000)
+		var v = move_and_slide(direction * 10)
 
 func set_show_hood(value):
 	$Head/Camera/Hood.visible = value
