@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/Utopia.map-09dab87c7b276a26c91efb3cb787337a.tres"
+
+[deps]
+
+source_file="res://maps/Utopia.map"
+dest_files=[ "res://.import/Utopia.map-09dab87c7b276a26c91efb3cb787337a.tres" ]
+
+[params]
+

@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/Romanium/scenes/Lisch/Lisch.gd" type="Script" id=1]
+[ext_resource path="res://assets/Romanium/scenes/Lisch/Lisch.dae" type="PackedScene" id=2]
+[ext_resource path="res://assets/Romanium/Grid.png" type="Texture" id=4]
+[ext_resource path="res://assets/Player/SpacePlayer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://addons/Replayer/replayer_node.gd" type="Script" id=6]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.407843, 0.643137, 0.678431, 1 )
+albedo_texture = ExtResource( 4 )
+
+[sub_resource type="QuadMesh" id=2]
+material = SubResource( 1 )
+
+[node name="Spatial" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+script = ExtResource( 1 )
+
+[node name="Water" type="MeshInstance" parent="."]
+transform = Transform( 2111, 0, 0, 0, -25.8271, 111, 0, -2110.84, -1.35814, 0, -17, 0 )
+visible = false
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Lisch" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -6, 0, -3 )
+
+[node name="Spawn" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 280.082, 13.3098, 176.269 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 286.877, 15.9682, 203.432 )
+can_fly = true
+
+[node name="Replayer" type="Node" parent="Player"]
+script = ExtResource( 6 )
+output_path = "res://assets/Romanium/scenes/Utopology/player.json"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true

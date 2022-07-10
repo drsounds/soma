@@ -1,0 +1,115 @@
+// Game: Generic
+// Format: Standard
+// entity 0
+{
+"classname" "worldspawn"
+"_tb_textures" "textures;textures/vendors;textures/vendors/texturelib"
+// brush 0
+{
+( -320 304 16 ) ( -320 -240 16 ) ( -320 -240 -16 ) vendors/texturelib/rust_completely_rusted_0062_01_s 0 0 0 1 1
+( -320 -240 16 ) ( 320 -240 16 ) ( 320 -240 -16 ) vendors/texturelib/rust_completely_rusted_0062_01_s 0 0 0 1 1
+( 320 -240 -16 ) ( 320 304 -16 ) ( -320 304 -16 ) vendors/texturelib/rust_completely_rusted_0062_01_s 0 0 0 1 1
+( -320 304 16 ) ( 320 304 16 ) ( 320 -240 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s 0 0 0 1 1
+( 320 304 -16 ) ( 320 304 16 ) ( -320 304 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s 0 0 0 1 1
+( 320 -240 16 ) ( 320 304 16 ) ( 320 304 -16 ) vendors/texturelib/rust_completely_rusted_0062_01_s 0 0 0 1 1
+}
+// brush 1
+{
+( 320 304 352 ) ( 320 -240 352 ) ( 320 -240 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s 0 16 0 1 1
+( 320 -240 352 ) ( 352 -240 352 ) ( 352 -240 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s -368 16 0 1 1
+( 352 -240 16 ) ( 352 304 16 ) ( 320 304 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s -368 0 0 1 1
+( 320 304 352 ) ( 352 304 352 ) ( 352 -240 352 ) vendors/texturelib/rust_completely_rusted_0062_01_s -368 0 0 1 1
+( 352 304 16 ) ( 352 304 352 ) ( 320 304 352 ) vendors/texturelib/rust_completely_rusted_0062_01_s -368 16 0 1 1
+( 352 -240 352 ) ( 352 304 352 ) ( 352 304 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s 0 16 0 1 1
+}
+// brush 2
+{
+( -352 304 352 ) ( -352 -240 352 ) ( -352 -240 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s 0 304 0 1 1
+( -352 -240 352 ) ( -320 -240 352 ) ( -320 -240 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s -336 304 0 1 1
+( -320 -240 16 ) ( -320 304 16 ) ( -352 304 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s -336 0 0 1 1
+( -352 304 352 ) ( -320 304 352 ) ( -320 -240 352 ) vendors/texturelib/rust_completely_rusted_0062_01_s -336 0 0 1 1
+( -320 304 16 ) ( -320 304 352 ) ( -352 304 352 ) vendors/texturelib/rust_completely_rusted_0062_01_s -336 304 0 1 1
+( -320 -240 352 ) ( -320 304 352 ) ( -320 304 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s 0 304 0 1 1
+}
+// brush 3
+{
+( -320 304 384 ) ( -320 -240 384 ) ( -320 -240 352 ) vendors/texturelib/rust_completely_rusted_0062_01_s 0 16 0 1 1
+( -320 -240 384 ) ( 320 -240 384 ) ( 320 -240 352 ) vendors/texturelib/rust_completely_rusted_0062_01_s -304 16 0 1 1
+( 320 -240 352 ) ( 320 304 352 ) ( -320 304 352 ) vendors/texturelib/rust_completely_rusted_0062_01_s -304 0 0 1 1
+( -320 304 384 ) ( 320 304 384 ) ( 320 -240 384 ) vendors/texturelib/rust_completely_rusted_0062_01_s -304 0 0 1 1
+( 320 304 352 ) ( 320 304 384 ) ( -320 304 384 ) vendors/texturelib/rust_completely_rusted_0062_01_s -304 16 0 1 1
+( 320 -240 384 ) ( 320 304 384 ) ( 320 304 352 ) vendors/texturelib/rust_completely_rusted_0062_01_s 0 16 0 1 1
+}
+// brush 4
+{
+( -320 336 352 ) ( -320 304 352 ) ( -320 304 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s -736 16 0 1 1
+( -320 304 352 ) ( -128 304 352 ) ( -128 304 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s -160 16 0 -1 1
+( -128 304 16 ) ( -128 336 16 ) ( -320 336 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s -736 160 90 1 1
+( -320 336 352 ) ( -128 336 352 ) ( -128 304 352 ) vendors/texturelib/rust_completely_rusted_0062_01_s -736 160 90 1 1
+( -128 336 16 ) ( -128 336 352 ) ( -320 336 352 ) vendors/texturelib/rust_completely_rusted_0062_01_s -160 16 0 -1 1
+( -128 304 352 ) ( -128 336 352 ) ( -128 336 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s -736 16 0 1 1
+}
+// brush 5
+{
+( -320 -240 352 ) ( -320 -272 352 ) ( -320 -272 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s -768 16 0 1 1
+( -320 -272 352 ) ( 320 -272 352 ) ( 320 -272 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s 48 16 0 -1 1
+( 320 -272 16 ) ( 320 -240 16 ) ( -320 -240 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s -768 -48 90 1 1
+( -320 -240 352 ) ( 320 -240 352 ) ( 320 -272 352 ) vendors/texturelib/rust_completely_rusted_0062_01_s -768 -48 90 1 1
+( 320 -240 16 ) ( 320 -240 352 ) ( -320 -240 352 ) vendors/texturelib/rust_completely_rusted_0062_01_s 48 16 0 -1 1
+( 320 -272 352 ) ( 320 -240 352 ) ( 320 -240 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s -768 16 0 1 1
+}
+// brush 6
+{
+( 128 336 352 ) ( 128 304 352 ) ( 128 304 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s -752 16 0 1 1
+( 128 304 352 ) ( 320 304 352 ) ( 320 304 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s 48 16 0 -1 1
+( 320 304 16 ) ( 320 336 16 ) ( 128 336 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s -752 -48 90 1 1
+( 128 336 352 ) ( 320 336 352 ) ( 320 304 352 ) vendors/texturelib/rust_completely_rusted_0062_01_s -752 -48 90 1 1
+( 320 336 16 ) ( 320 336 352 ) ( 128 336 352 ) vendors/texturelib/rust_completely_rusted_0062_01_s 48 16 0 -1 1
+( 320 304 352 ) ( 320 336 352 ) ( 320 336 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s -752 16 0 1 1
+}
+// brush 7
+{
+( -128 336 48 ) ( -128 304 48 ) ( -128 304 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s -784 16 0 1 1
+( -128 304 48 ) ( 128 304 48 ) ( 128 304 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s 128 16 0 -1 1
+( 128 304 16 ) ( 128 336 16 ) ( -128 336 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s -784 -128 90 1 1
+( -128 336 48 ) ( 128 336 48 ) ( 128 304 48 ) vendors/texturelib/rust_completely_rusted_0062_01_s -784 -128 90 1 1
+( 128 336 16 ) ( 128 336 48 ) ( -128 336 48 ) vendors/texturelib/rust_completely_rusted_0062_01_s 128 16 0 -1 1
+( 128 304 48 ) ( 128 336 48 ) ( 128 336 16 ) vendors/texturelib/rust_completely_rusted_0062_01_s -784 16 0 1 1
+}
+// brush 8
+{
+( -128 336 352 ) ( -128 304 352 ) ( -128 304 288 ) vendors/texturelib/rust_completely_rusted_0062_01_s -784 64 0 1 1
+( -128 304 352 ) ( 128 304 352 ) ( 128 304 288 ) vendors/texturelib/rust_completely_rusted_0062_01_s 320 64 0 -1 1
+( 128 304 288 ) ( 128 336 288 ) ( -128 336 288 ) vendors/texturelib/rust_completely_rusted_0062_01_s -784 -320 90 1 1
+( -128 336 352 ) ( 128 336 352 ) ( 128 304 352 ) vendors/texturelib/rust_completely_rusted_0062_01_s -784 -320 90 1 1
+( 128 336 288 ) ( 128 336 352 ) ( -128 336 352 ) vendors/texturelib/rust_completely_rusted_0062_01_s 320 64 0 -1 1
+( 128 304 352 ) ( 128 336 352 ) ( 128 336 288 ) vendors/texturelib/rust_completely_rusted_0062_01_s -784 64 0 1 1
+}
+// brush 9
+{
+( -80 336 288 ) ( -80 304 288 ) ( -80 304 48 ) vendors/texturelib/rust_completely_rusted_0062_01_s -784 96 0 1 1
+( -80 304 288 ) ( -48 304 288 ) ( -48 304 48 ) vendors/texturelib/rust_completely_rusted_0062_01_s 496 96 0 -1 1
+( -48 304 48 ) ( -48 336 48 ) ( -80 336 48 ) vendors/texturelib/rust_completely_rusted_0062_01_s -784 -496 90 1 1
+( -80 336 288 ) ( -48 336 288 ) ( -48 304 288 ) vendors/texturelib/rust_completely_rusted_0062_01_s -784 -496 90 1 1
+( -48 336 48 ) ( -48 336 288 ) ( -80 336 288 ) vendors/texturelib/rust_completely_rusted_0062_01_s 496 96 0 -1 1
+( -48 304 288 ) ( -48 336 288 ) ( -48 336 48 ) vendors/texturelib/rust_completely_rusted_0062_01_s -784 96 0 1 1
+}
+// brush 10
+{
+( -16 336 288 ) ( -16 304 288 ) ( -16 304 48 ) vendors/texturelib/rust_completely_rusted_0062_01_s -784 192 0 1 1
+( -16 304 288 ) ( 16 304 288 ) ( 16 304 48 ) vendors/texturelib/rust_completely_rusted_0062_01_s 496 192 0 -1 1
+( 16 304 48 ) ( 16 336 48 ) ( -16 336 48 ) vendors/texturelib/rust_completely_rusted_0062_01_s -784 -496 90 1 1
+( -16 336 288 ) ( 16 336 288 ) ( 16 304 288 ) vendors/texturelib/rust_completely_rusted_0062_01_s -784 -496 90 1 1
+( 16 336 48 ) ( 16 336 288 ) ( -16 336 288 ) vendors/texturelib/rust_completely_rusted_0062_01_s 496 192 0 -1 1
+( 16 304 288 ) ( 16 336 288 ) ( 16 336 48 ) vendors/texturelib/rust_completely_rusted_0062_01_s -784 192 0 1 1
+}
+// brush 11
+{
+( 48 336 288 ) ( 48 304 288 ) ( 48 304 48 ) vendors/texturelib/rust_completely_rusted_0062_01_s -784 304 0 1 1
+( 48 304 288 ) ( 80 304 288 ) ( 80 304 48 ) vendors/texturelib/rust_completely_rusted_0062_01_s 512 304 0 -1 1
+( 80 304 48 ) ( 80 336 48 ) ( 48 336 48 ) vendors/texturelib/rust_completely_rusted_0062_01_s -784 -512 90 1 1
+( 48 336 288 ) ( 80 336 288 ) ( 80 304 288 ) vendors/texturelib/rust_completely_rusted_0062_01_s -784 -512 90 1 1
+( 80 336 48 ) ( 80 336 288 ) ( 48 336 288 ) vendors/texturelib/rust_completely_rusted_0062_01_s 512 304 0 -1 1
+( 80 304 288 ) ( 80 336 288 ) ( 80 336 48 ) vendors/texturelib/rust_completely_rusted_0062_01_s -784 304 0 1 1
+}
+}

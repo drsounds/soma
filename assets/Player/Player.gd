@@ -468,7 +468,3 @@ func reload():
 		
 func _on_reload_timer_timeout():
 	$WeaponStats.mag_fill()
-	
-
-
-

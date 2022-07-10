@@ -1,0 +1,141 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://assets/FirstPersonPlayer/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Romanium/scenes/001_Space Float.gd" type="Script" id=2]
+[ext_resource path="res://addons/SyndiBox/syndibox.gd" type="Script" id=3]
+[ext_resource path="res://assets/Romanium/entities/angel/Angel.gd" type="Script" id=4]
+[ext_resource path="res://assets/Romanium/spacesboxes/space.png" type="Texture" id=5]
+[ext_resource path="res://assets/Romanium/entities/angel/Angel.tscn" type="PackedScene" id=6]
+[ext_resource path="res://addons/SyndiBox/Assets/TextDefault.tres" type="DynamicFont" id=8]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+[sub_resource type="World" id=2]
+
+[sub_resource type="PanoramaSky" id=3]
+radiance_size = 1
+panorama = ExtResource( 5 )
+
+[sub_resource type="Environment" id=4]
+background_mode = 2
+background_sky = SubResource( 3 )
+background_sky_orientation = Basis( 0.815, 0.036, -1.339, -0.001, 0.547, 0, 1.789, 0, 1 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "DarkForce"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:environment")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:environment:background_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 5 )
+}
+
+[sub_resource type="Animation" id=6]
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 1, 2, 3 ),
+"transitions": PoolRealArray( 1.7411, 0.482968, 1.31951, 0.466516 ),
+"update": 0,
+"values": [ Vector2( 248.56, 148.964 ), Vector2( 243.221, 40.8315 ), Vector2( 249.895, 186.329 ), Vector2( 259.239, 20.8089 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:pitch_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.01 ]
+}
+
+[node name="Spatial" type="ViewportContainer"]
+material = SubResource( 1 )
+margin_left = 0.215819
+margin_top = 1.33032
+margin_right = 1024.22
+margin_bottom = 769.33
+script = ExtResource( 2 )
+
+[node name="Viewport" type="Viewport" parent="."]
+arvr = true
+size = Vector2( 1280, 768 )
+own_world = true
+world = SubResource( 2 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Spatial" type="Spatial" parent="Viewport"]
+visible = false
+
+[node name="Player" parent="Viewport/Spatial" instance=ExtResource( 1 )]
+gravity = 0.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Viewport/Spatial"]
+environment = SubResource( 4 )
+
+[node name="DarkForce" type="AnimationPlayer" parent="Viewport/Spatial/WorldEnvironment"]
+anims/DarkForce = SubResource( 5 )
+
+[node name="SyndiBox" type="ReferenceRect" parent="Viewport/Spatial"]
+visible = false
+margin_left = 17.9795
+margin_top = 501.933
+margin_right = 1002.98
+margin_bottom = 548.933
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+DIALOG = "It all begins in a parallel universe...
+I was a women...
+I was floating around weightless...
+And was in perfect love...
+But then something happened..."
+FONT = ExtResource( 8 )
+TEXT_SPEED = 0.029
+CUSTOM_EFFECTS = "res://addons/SyndiBox/custom.gd"
+
+[node name="Angel" parent="." instance=ExtResource( 6 )]
+position = Vector2( 259.239, 20.8089 )
+script = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Angel"]
+playback_process_mode = 0
+anims/Floating = SubResource( 6 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
+[node name="AudioStreamBreaker" type="AnimationPlayer" parent="AudioStreamPlayer"]
+anims/ChewTape = SubResource( 7 )
+
+[connection signal="section_finished" from="Viewport/Spatial/SyndiBox" to="." method="_on_SyndiBox_section_finished"]

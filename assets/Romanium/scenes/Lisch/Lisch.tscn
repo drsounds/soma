@@ -1,0 +1,91 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/Romanium/scenes/Lisch/Lisch.dae" type="PackedScene" id=1]
+[ext_resource path="res://assets/3d_car_customizable/assets/3d_car_customizable/car.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/Romanium/scenes/Lisch/Lisch.gd" type="Script" id=3]
+[ext_resource path="res://assets/Romanium/Grid.png" type="Texture" id=4]
+[ext_resource path="res://assets/PE3/cars/Hiace.tscn" type="PackedScene" id=5]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.407843, 0.643137, 0.678431, 1 )
+albedo_texture = ExtResource( 4 )
+
+[sub_resource type="QuadMesh" id=2]
+material = SubResource( 1 )
+
+[node name="Spatial" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.814178, -0.335449, 0.158966 )
+script = ExtResource( 3 )
+
+[node name="Water" type="MeshInstance" parent="."]
+transform = Transform( 2111, 0, 0, 0, -25.8271, 111, 0, -2110.84, -1.35814, 0, -17, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Lisch" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -5.25684, 7.41429, -3.83127 )
+
+[node name="PlayerCar" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.0209075, 0, -0.999781, 0, 1, 0, 0.999781, 0, 0.0209075, 362.885, 8.2568, -118.839 )
+gravity_scale = 3.0
+use_camera = true
+use_controls = true
+
+[node name="Car1" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.0209075, 0, -0.999781, 0, 1, 0, 0.999781, 0, 0.0209075, 356.672, 7.56839, -112.548 )
+mass = 39.97
+show_settings = false
+create_default_player = false
+
+[node name="Car2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.0209075, 0, -0.999781, 0, 1, 0, 0.999781, 0, 0.0209075, 342.612, 8.14807, -117.564 )
+show_settings = false
+create_default_player = false
+
+[node name="Car3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.0209075, 0, -0.999781, 0, 1, 0, 0.999781, 0, 0.0209075, 368.062, 8.14807, -121.065 )
+show_settings = false
+create_default_player = false
+
+[node name="Car4" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.0209075, 0, -0.999781, 0, 1, 0, 0.999781, 0, 0.0209075, 373.047, 8.14807, -121.065 )
+show_settings = false
+create_default_player = false
+
+[node name="Car5" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.0209075, 0, -0.999781, 0, 1, 0, 0.999781, 0, 0.0209075, 378.617, 8.14807, -153.406 )
+show_settings = false
+create_default_player = false
+
+[node name="Car6" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.0209075, 0, -0.999781, 0, 1, 0, 0.999781, 0, 0.0209075, 385.615, 8.14807, -153.406 )
+show_settings = false
+create_default_player = false
+
+[node name="Spawn1" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 346.316, 7.54906, -87.747 )
+
+[node name="Spawn2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 304.178, 7.54906, -90.1538 )
+
+[node name="Spawn3" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 316.292, 7.54906, -149.05 )
+
+[node name="Spawn4" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 292.1, 7.54906, -115.563 )
+
+[node name="Spawn5" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 409.958, 7.54906, -115.563 )
+
+[node name="Spawn6" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 256.055, 7.54906, -77.0515 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.571201, 0.82081, 0, -0.82081, 0.571201, 365.605, 47.164, -93.6122 )
+far = 608.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

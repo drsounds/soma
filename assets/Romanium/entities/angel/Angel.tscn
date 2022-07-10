@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/Romanium/entities/angel/angel_001.png" type="Texture" id=1]
+[ext_resource path="res://assets/Romanium/entities/angel/angel_002.png" type="Texture" id=2]
+
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[node name="Angel" type="Node2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 120.068, 116.837 )
+scale = Vector2( 0.451456, 0.451456 )
+frames = SubResource( 1 )
+frame = 1
+playing = true

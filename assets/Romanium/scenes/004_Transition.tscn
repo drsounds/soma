@@ -1,0 +1,134 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/Romanium/scenes/Menu.gd" type="Script" id=2]
+[ext_resource path="res://assets/FirstPersonPlayer/Player.tscn" type="PackedScene" id=5]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+[sub_resource type="World" id=2]
+
+[sub_resource type="OpenSimplexNoise" id=3]
+seed = -5
+octaves = 9
+period = 10.0
+persistence = 0.547
+lacunarity = 1.11
+
+[sub_resource type="NoiseTexture" id=4]
+noise = SubResource( 3 )
+
+[sub_resource type="PanoramaSky" id=5]
+radiance_size = 1
+panorama = SubResource( 4 )
+
+[sub_resource type="Environment" id=6]
+background_mode = 2
+background_sky = SubResource( 5 )
+background_sky_orientation = Basis( 0.815, 0.036, -1.339, -0.001, 0.547, 0, 1.789, 0, 1 )
+
+[sub_resource type="Animation" id=7]
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:environment")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:environment:background_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 5 )
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "Spinning"
+length = 3.0
+loop = true
+tracks/0/type = "transform"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray(  )
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 90, 0, 0 ), Vector3( 90, 0, 90 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:pitch_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.01 ]
+}
+
+[node name="Spatial" type="ViewportContainer"]
+material = SubResource( 1 )
+margin_left = 0.215819
+margin_top = 1.33032
+margin_right = 1024.22
+margin_bottom = 769.33
+script = ExtResource( 2 )
+
+[node name="Viewport" type="Viewport" parent="."]
+arvr = true
+size = Vector2( 1280, 768 )
+own_world = true
+world = SubResource( 2 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Spatial" type="Spatial" parent="Viewport"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Viewport/Spatial"]
+environment = SubResource( 6 )
+
+[node name="DarkForce" type="AnimationPlayer" parent="Viewport/Spatial/WorldEnvironment"]
+anims/DarkForce = SubResource( 7 )
+
+[node name="Player" parent="Viewport/Spatial" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+mouse_sensitivity = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Viewport/Spatial/Player"]
+anims/Spinning = SubResource( 8 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="AudioStreamBreaker" type="AnimationPlayer" parent="AudioStreamPlayer"]
+anims/Spinning = SubResource( 9 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.844
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

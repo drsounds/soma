@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Consuspection.ogg-60d901c559970c557f221837b8478a1e.oggstr"
+
+[deps]
+
+source_file="res://assets/Romanium/scenes/Consuspection.ogg"
+dest_files=[ "res://.import/Consuspection.ogg-60d901c559970c557f221837b8478a1e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

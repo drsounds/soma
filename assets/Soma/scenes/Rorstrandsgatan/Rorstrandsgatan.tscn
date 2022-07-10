@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/Soma/door/Door.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Soma/scenes/Rorstrandsgatan/Rorstrandsgatan.obj" type="ArrayMesh" id=2]
@@ -7,9 +7,19 @@
 [ext_resource path="res://assets/Soma/scenes/FuturisticCity.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/DrSounds/Music/Midnight Sun.ogg" type="AudioStream" id=6]
 [ext_resource path="res://assets/Soma/components/Television/Television.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/Romanium/DocumentaryPlayer.tscn" type="PackedScene" id=8]
+
+[sub_resource type="ViewportTexture" id=1]
+viewport_path = NodePath("Viewport")
 
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 3 )
+
+[node name="Viewport" type="Viewport" parent="."]
+size = Vector2( 800, 600 )
+handle_input_locally = false
+
+[node name="DocumentaryPlayer" parent="Viewport" instance=ExtResource( 8 )]
 
 [node name="Television2" parent="." instance=ExtResource( 7 )]
 transform = Transform( 0, 0, -0.521718, 0, 0.512572, 0, 0.564443, 0, 0, 19.4957, 0.394264, 18.2959 )
@@ -386,7 +396,7 @@ material/287 = null
 script = ExtResource( 4 )
 
 [node name="Spawn_Start" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6497, 0.420435, 17.9807 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0791, 0.420435, 18.4284 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
@@ -394,3 +404,10 @@ autoplay = true
 
 [node name="Television" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 56.5716, -16.6598, 39.6286 )
+viewport = SubResource( 1 )
+
+[node name="Viewport" type="Viewport" parent="Television"]
+size = Vector2( 800, 600 )
+
+[node name="Camera" type="Camera" parent="Television/Viewport"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6108, 0.555951, 17.4838 )

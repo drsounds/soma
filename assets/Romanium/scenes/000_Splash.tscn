@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/SyndiBox/syndibox.gd" type="Script" id=1]
+[ext_resource path="res://addons/SyndiBox/Assets/TextDefault.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/Romanium/scenes/000_Splash.gd" type="Script" id=3]
+
+[sub_resource type="Theme" id=1]
+
+[node name="Control" type="Control"]
+margin_top = 11.3137
+margin_right = 1287.0
+margin_bottom = 769.314
+theme = SubResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SyndiBox" type="ReferenceRect" parent="."]
+margin_left = 59.8578
+margin_top = 327.059
+margin_right = 1205.86
+margin_bottom = 683.059
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+DIALOG = "A Buddhalow Production..."
+FONT = ExtResource( 2 )
+CUSTOM_EFFECTS = "res://addons/SyndiBox/custom.gd"
+
+[connection signal="signal_tag" from="SyndiBox" to="." method="_on_SyndiBox_signal_tag"]

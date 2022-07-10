@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/Cosmosfulness/Entities/Human/Human.dae" type="PackedScene" id=1]
+[ext_resource path="res://assets/Cosmosfulness/Entities/Human/Flysuit.tscn" type="PackedScene" id=2]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Human" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -182.299 )
+
+[node name="Gear" type="Spatial" parent="."]
+
+[node name="FlySuit" parent="Gear" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.37869, 0.278634, 2.48413, -180.639 )

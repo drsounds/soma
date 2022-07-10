@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/Romanium/entities/aerojogger/aerojogger_003.png" type="Texture" id=1]
+[ext_resource path="res://assets/Romanium/entities/aerojogger/aerojogger_001.png" type="Texture" id=2]
+[ext_resource path="res://assets/Romanium/entities/aerojogger/aerojogger_002.png" type="Texture" id=3]
+
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 561.725, 280.378 )
+scale = Vector2( 0.55902, 0.519108 )
+frames = SubResource( 1 )
+frame = 1
+playing = true

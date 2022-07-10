@@ -1,0 +1,133 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/FirstPersonPlayer/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Romanium/scenes/001_Intro.gd" type="Script" id=2]
+[ext_resource path="res://assets/Romanium/entities/angel/Angel.gd" type="Script" id=4]
+[ext_resource path="res://assets/Romanium/spacesboxes/space.png" type="Texture" id=5]
+[ext_resource path="res://assets/Romanium/entities/angel/Angel.tscn" type="PackedScene" id=6]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+[sub_resource type="PanoramaSky" id=3]
+radiance_size = 1
+panorama = ExtResource( 5 )
+
+[sub_resource type="Environment" id=4]
+background_mode = 2
+background_sky = SubResource( 3 )
+background_sky_orientation = Basis( 0.598365, 0.00109656, -0.801223, -0.00183259, 0.999998, 0, 0.801221, 0.00146832, 0.598366 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "DarkForce"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:environment")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:environment:background_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 5 )
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Space"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:environment:background_sky_rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, -53.247, -0.105 ), Vector3( 0, -53.473, 11 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Floating"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 518, 280.845 ), Vector2( 518, 232.845 ), Vector2( 518, 313.29 ), Vector2( 508, 191.095 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:pitch_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.01 ]
+}
+
+[node name="Spatial" type="ViewportContainer"]
+material = SubResource( 1 )
+margin_top = 1.0
+margin_right = 2358.0
+margin_bottom = 1070.0
+script = ExtResource( 2 )
+
+[node name="Viewport" type="Viewport" parent="."]
+size = Vector2( 2340, 1080 )
+own_world = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Spatial" type="Spatial" parent="Viewport"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Viewport/Spatial"]
+environment = SubResource( 4 )
+
+[node name="DarkForce" type="AnimationPlayer" parent="Viewport/Spatial/WorldEnvironment"]
+anims/DarkForce = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Viewport/Spatial/WorldEnvironment"]
+anims/Space = SubResource( 6 )
+
+[node name="Player" parent="Viewport/Spatial" instance=ExtResource( 1 )]
+mouse_sensitivity = 0.0
+
+[node name="Angel" parent="." instance=ExtResource( 6 )]
+position = Vector2( 518, 280.845 )
+script = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Angel"]
+playback_process_mode = 0
+anims/Floating = SubResource( 7 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
+[node name="AudioStreamBreaker" type="AnimationPlayer" parent="AudioStreamPlayer"]
+anims/ChewTape = SubResource( 8 )

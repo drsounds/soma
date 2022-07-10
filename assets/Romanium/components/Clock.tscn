@@ -1,0 +1,130 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/Romanium/components/Clock.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="Theme" id=3]
+
+[node name="Clock2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="BG" type="Panel" parent="."]
+margin_right = 600.0
+margin_bottom = 600.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tick" type="Panel" parent="BG"]
+margin_top = 3.0
+margin_right = 600.0
+margin_bottom = 603.0
+rect_pivot_offset = Vector2( 300, 288 )
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="BG/Tick"]
+margin_left = 296.0
+margin_top = 7.0
+margin_right = 314.0
+margin_bottom = 31.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Clock" type="Panel" parent="."]
+margin_right = 600.0
+margin_bottom = 600.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hour" type="Panel" parent="Clock"]
+margin_left = 2.0
+margin_top = 1.58575
+margin_right = 602.0
+margin_bottom = 601.586
+rect_pivot_offset = Vector2( 300, 288 )
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Clock/Hour"]
+margin_left = 296.0
+margin_top = 117.0
+margin_right = 311.0
+margin_bottom = 287.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Minute" type="Panel" parent="Clock"]
+margin_left = -0.284531
+margin_top = 2.09145
+margin_right = 599.715
+margin_bottom = 602.091
+rect_pivot_offset = Vector2( 300, 288 )
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Clock/Minute"]
+margin_left = 296.0
+margin_top = 7.0
+margin_right = 314.0
+margin_bottom = 287.0
+theme = SubResource( 3 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Second" type="Panel" parent="Clock"]
+margin_left = -0.512756
+margin_top = -0.746109
+margin_right = 599.487
+margin_bottom = 599.254
+rect_pivot_offset = Vector2( 300, 288 )
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Clock/Second"]
+margin_left = 300.719
+margin_top = 14.8316
+margin_right = 309.719
+margin_bottom = 289.832
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,0 +1,141 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/Romanium/scenes/001_Intro.gd" type="Script" id=2]
+[ext_resource path="res://assets/Romanium/entities/angel/Angel.gd" type="Script" id=4]
+[ext_resource path="res://assets/Romanium/spacesboxes/space.png" type="Texture" id=5]
+[ext_resource path="res://assets/Romanium/entities/angel/Angel.tscn" type="PackedScene" id=6]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+[sub_resource type="World" id=2]
+
+[sub_resource type="PanoramaSky" id=3]
+radiance_size = 1
+panorama = ExtResource( 5 )
+
+[sub_resource type="Environment" id=4]
+background_mode = 2
+background_sky = SubResource( 3 )
+background_sky_orientation = Basis( 0.815, 0.036, -1.339, -0.001, 0.547, 0, 1.789, 0, 1 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "DarkForce"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:environment")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:environment:background_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 5 )
+}
+
+[sub_resource type="Animation" id=6]
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 1, 2, 3 ),
+"transitions": PoolRealArray( 1.7411, 0.482968, 1.31951, 0.466516 ),
+"update": 0,
+"values": [ Vector2( 248.56, 148.964 ), Vector2( 243.221, 40.8315 ), Vector2( 249.895, 186.329 ), Vector2( 259.239, 20.8089 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:pitch_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.01 ]
+}
+
+[node name="Spatial" type="ViewportContainer"]
+material = SubResource( 1 )
+margin_top = 1.0
+margin_right = 2329.0
+margin_bottom = 1079.0
+script = ExtResource( 2 )
+
+[node name="Viewport" type="Viewport" parent="."]
+size = Vector2( 2340, 1080 )
+own_world = true
+world = SubResource( 2 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Spatial" type="Spatial" parent="Viewport"]
+visible = false
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Viewport/Spatial"]
+environment = SubResource( 4 )
+
+[node name="DarkForce" type="AnimationPlayer" parent="Viewport/Spatial/WorldEnvironment"]
+anims/DarkForce = SubResource( 5 )
+
+[node name="Camera" type="Camera" parent="Viewport/Spatial"]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control"]
+margin_left = 214.517
+margin_top = 473.978
+margin_right = 472.517
+margin_bottom = 564.978
+text = "Television Mode"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="Control"]
+margin_left = 719.391
+margin_top = 473.978
+margin_right = 977.391
+margin_bottom = 564.978
+text = "Game Mode"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Angel" parent="." instance=ExtResource( 6 )]
+position = Vector2( 221.299, 111.815 )
+script = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Angel"]
+playback_process_mode = 0
+anims/Floating = SubResource( 6 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
+[node name="AudioStreamBreaker" type="AnimationPlayer" parent="AudioStreamPlayer"]
+anims/ChewTape = SubResource( 7 )
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Control/Button2" to="." method="_on_Button2_pressed"]

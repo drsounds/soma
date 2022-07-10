@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/3d_car_customizable/assets/3d_car_customizable/car.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Romanium/scenes/Elevator/Cab.dae" type="PackedScene" id=2]
+[ext_resource path="res://assets/Romanium/scenes/Elevator/Shaft.dae" type="PackedScene" id=3]
+[ext_resource path="res://assets/Romanium/scenes/Elevator/Elevator.gd" type="Script" id=4]
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="Car" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 34.4854, 0 )
+
+[node name="Cab" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.6621, 65.3884, 4.71491 )
+
+[node name="Shaft" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4541, 65.0727, 7.0607 )

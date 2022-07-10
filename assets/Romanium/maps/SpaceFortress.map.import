@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/SpaceFortress.map-96485574ab35dd4650686a11f628d78d.tres"
+
+[deps]
+
+source_file="res://maps/SpaceFortress.map"
+dest_files=[ "res://.import/SpaceFortress.map-96485574ab35dd4650686a11f628d78d.tres" ]
+
+[params]
+

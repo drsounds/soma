@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/3d_car_customizable/assets/3d_car_customizable/assets/car_model.glb" type="PackedScene" id=1]
+[ext_resource path="res://assets/3d_car_customizable/assets/3d_car_customizable/scripts/car.gd" type="Script" id=2]
+[ext_resource path="res://assets/3d_car_customizable/assets/3d_car_customizable/scripts/Camera.gd" type="Script" id=3]
+[ext_resource path="res://assets/PickupExpress/audio/Hilux.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/PickupExpress/audio/vcrashs.wav" type="AudioStream" id=5]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1, 1, 1.9448 )
+
+[node name="Car" instance=ExtResource( 1 )]
+mass = 81.6327
+continuous_cd = true
+contact_monitor = true
+can_sleep = false
+script = ExtResource( 2 )
+use_camera = false
+
+[node name="CollisionShape" type="CollisionShape" parent="." index="0"]
+transform = Transform( 1, 0, 0, 0, 0.469493, 0, 0, 0, 1, 9.06427e-05, -0.0546551, -0.244585 )
+shape = SubResource( 1 )
+
+[node name="rear_left" parent="." index="2"]
+use_as_traction = true
+wheel_radius = 0.32
+wheel_friction_slip = 5.0
+suspension_travel = 1.0
+suspension_stiffness = 35.0
+suspension_max_force = 800.0
+
+[node name="rear_right" parent="." index="3"]
+use_as_traction = true
+wheel_radius = 0.32
+wheel_friction_slip = 5.0
+suspension_travel = 1.0
+suspension_stiffness = 35.0
+suspension_max_force = 800.0
+
+[node name="front_right" parent="." index="4"]
+use_as_steering = true
+wheel_radius = 0.32
+wheel_friction_slip = 5.0
+suspension_travel = 1.0
+suspension_stiffness = 35.0
+suspension_max_force = 800.0
+
+[node name="front_left" parent="." index="5"]
+use_as_steering = true
+wheel_radius = 0.32
+wheel_friction_slip = 5.0
+suspension_travel = 1.0
+suspension_stiffness = 35.0
+suspension_max_force = 800.0
+
+[node name="Camera" type="Camera" parent="." index="6"]
+transform = Transform( -1, 0, -6.11146e-06, 0, 1, 0, 6.11146e-06, 0, -1, 0, 0, -4.73 )
+far = 11111.0
+script = ExtResource( 3 )
+distance = 1111.0
+
+[node name="EngineSound" type="AudioStreamPlayer3D" parent="." index="7"]
+stream = ExtResource( 4 )
+
+[node name="CameraFront" type="Camera" parent="." index="8"]
+transform = Transform( -1, 0, -9.6489e-08, 0, 1, 0, 9.6489e-08, 0, -1, 0, 0.479962, 0.372178 )
+far = 118192.0
+
+[node name="BigCrashSound" type="AudioStreamPlayer3D" parent="." index="9"]
+stream = ExtResource( 5 )
+
+[node name="CameraBackFront" type="Camera" parent="." index="10"]
+transform = Transform( -0.999979, 0, 0.00645767, 0, 1, 0, -0.00645767, 0, -0.999979, 0, 1.83009, -7.98079 )
+current = true
+far = 1.11819e+06
+
+[node name="GlassCrashSound" type="AudioStreamPlayer3D" parent="." index="11"]
+stream = ExtResource( 5 )
+[connection signal="body_entered" from="." to="." method="_on_Car_body_entered"]
