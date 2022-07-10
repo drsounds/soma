@@ -54,10 +54,18 @@ func _ready() -> void:
 	#switch_weapon(0)
 	#$splatters.set_as_toplevel(true)
 
+
 func _physics_process(delta) -> void:
 	 
 	var h_rot = self.global_transform.basis.get_euler().y
- 
+	if Input.is_action_pressed("hoist") || Input.is_action_pressed("sink"):
+		direction = Vector3(
+			0,
+			Input.get_action_strength("hoist") - Input.get_action_strength("sink"),
+			0
+		)
+		var v = move_and_slide(direction * 10)
+
 	if Input.is_action_pressed("forward") ||  Input.is_action_pressed("backward") ||  Input.is_action_pressed("left") ||  Input.is_action_pressed("right"):
 		print(Input.get_action_strength("forward") * 100 )
 		direction = Vector3(
